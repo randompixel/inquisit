@@ -1,0 +1,63 @@
+@mixin font-size($sizeValue: 12 ){
+    font-size: $sizeValue + px; //fallback for old browsers
+    font-size: (0.125 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue: 12 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+@mixin box-shadow($top, $left, $blur, $colour, $inset:'') {
+    -webkit-box-shadow: $inset $top $left $blur $colour;
+    -moz-box-shadow: $inset $top $left $blur $colour;
+    box-shadow: $inset $top $left $blur $colour;
+}
+
+@mixin linear-gradient($angle, $colour-stops...) {
+    $_angle-with-vendor-prefix: "";
+    $_angle: "";
+    @if $angle == "to top" or $angle == "bottom" {
+        $_angle-with-vendor-prefix: bottom;
+        $_angle: to top;
+    } @else if $angle == "to right" or $angle == "left" {
+        $_angle-with-vendor-prefix: left;
+        $_angle: to right;
+    } @else if $angle == "to bottom" or $angle == "top" {
+        $_angle-with-vendor-prefix: top;
+        $_angle: to bottom;
+    } @else if $angle == "to left" or $angle == "right" {
+        $_angle-with-vendor-prefix: right;
+        $_angle: to left;
+    } @else if $angle == "to top right" or $angle == "bottom left" {
+        $_angle-with-vendor-prefix: bottom left;
+        $_angle: to top right;
+    } @else if $angle == "to bottom right" or $angle == "top left" {
+        $_angle-with-vendor-prefix: top left;
+        $_angle: to bottom right;
+    } @else if $angle == "to bottom left" or $angle == "top right" {
+        $_angle-with-vendor-prefix: top right;
+        $_angle: to bottom left;
+    } @else if $angle == "to top left" or $angle == "bottom right" {
+        $_angle-with-vendor-prefix: bottom right;
+        $_angle: to top left;
+    } @else {
+        $_angle-with-vendor-prefix: $angle % 360;
+        $_angle: (90 - $angle) % 360;
+    }
+    background: -webkit-linear-gradient($_angle-with-vendor-prefix, $colour-stops);
+    background: -moz-linear-gradient($_angle-with-vendor-prefix, $colour-stops);
+    background: -o-linear-gradient($_angle-with-vendor-prefix, $colour-stops);
+    background: linear-gradient($_angle, $colour-stops);
+}
