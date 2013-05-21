@@ -7,22 +7,27 @@ h2 {
 }
 
 #header {
-    height:     5rem;
+    h1 {
+        margin-left: 2rem;
+    }
 }
 
 #cover {
-    height:     15rem;
+    img {
+        height:     auto;
+        width:      100%;
+    }
 }
 
 #main {
-    min-height:     10rem;
+    min-height:     8rem;
     padding:        1.5rem 0 1.5rem 0;
 
     #about {
         .me {
             height: 10rem;
             width:  10rem;
-            padding: 1rem;
+            padding: 0.8rem;
         }
         padding:    3rem;
     }
@@ -31,5 +36,9 @@ h2 {
 .card {
     padding:        1rem;
     margin-bottom:  1rem;
-    min-height:     30rem !important;
+    min-height:     25rem !important;
+}
+
+.badges {
+    margin-top:     1.6rem;
 }

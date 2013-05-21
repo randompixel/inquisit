@@ -1,15 +1,12 @@
 html {
     font: 62.5% Roboto, Arial, sans-serif;
-    @include linear-gradient('to bottom', $dark-background, #111);
-
-
 }
 
 body {
-    background: none !important; //override bootstrap
+    background: #000 !important; //override bootstrap
     color:  $light-text;
     @include font-size(12);
-    border-top: 5px solid $dark-purple;
+    border-top: 10px solid $dark-purple;
 }
 
 h1 {
@@ -25,20 +22,28 @@ h2 {
 }
 
 #footer {
+    //@include linear-gradient('to bottom', $dark-background, #111);
+    //height: 5rem;
+}
 
+#header {
+    background: #000;
+    
 }
 
 #main {
     background: $light-background;
     color: $dark-text;
     padding:    1rem;
+    @include box-shadow(0px,2px,1px,rgba(0,0,0,.2),inset);
 
     .card {
         background: $card-background;
         @include border-radius(3px);
         @include box-shadow(1px,1px,0,rgba(0,0,0,.1),inset);
         @include box-shadow(0px,-1px,0,rgba(0,0,0,.7),inset);
-        color: $dark-text;
+        color: $dark-text; 
+        transition: left 0.25s linear;
     }
 
     #about {
@@ -47,6 +52,10 @@ h2 {
             @include border-radius(50%);
         }
     }
+}
+
+.badges {
+    text-align:center;
 }
 
 
