@@ -1,9 +1,6 @@
 html {
   height: 100%; }
 
-h2 {
-  color: #AA7E61; }
-
 #header h1 {
   margin-left: 2rem; }
 
@@ -45,11 +42,18 @@ h1 {
   font-size: 3.75rem;
   color: #efefef;
   text-shadow: 1px 1px #999; }
+  h1 a, h1 a:hover {
+    color: #efefef;
+    text-decoration: none; }
 
 h2 {
   font-family: "Roboto Slab", Georgia, serif;
   font-size: 20px;
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  color: #a67a53; }
+  h2 a, h2 a:hover {
+    color: #a67a53;
+    text-decoration: none; }
 
 #header {
   background: #000; }
@@ -73,8 +77,7 @@ h2 {
     -webkit-box-shadow: inset 0px -1px 0 rgba(0, 0, 0, 0.7);
     -moz-box-shadow: inset 0px -1px 0 rgba(0, 0, 0, 0.7);
     box-shadow: inset 0px -1px 0 rgba(0, 0, 0, 0.7);
-    color: #555555;
-    transition: left 0.25s linear; }
+    color: #555555; }
   #main #about {
     text-align: center; }
     #main #about .me {
