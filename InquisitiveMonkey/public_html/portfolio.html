@@ -1,7 +1,12 @@
 <h2>Portfolio</h2>
-
-<ul>
-    <li class="mini-card" ng-repeat="project in portfolio">
-        {{project.name}}<br/>{{project.dates}}
-    </li>
-</ul>
+<div class='row-fluid'>
+    <div class="span3 mini-card" ng-repeat="project in portfolio">
+        <img ng-src="/img/portfolio/{{project.image}}"/>
+        <p>
+            <b>{{project.name}}</b>
+            <br/>
+            {{project.dates}}
+        </p>
+    </div>
+</div>
+<a class='btn'><i class='icon-home'></i> Home</a>

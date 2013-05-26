@@ -1,10 +1,22 @@
 [
     {
+        "name": "MyCityLink - Redesign",
+        "dates": "2013",
+        "image": "mcl-new-radar.png"
+    },
+    {
+        "name": "Portal - Redesign",
+        "dates": "2013",
+        "image": "portal-new-wide.png"
+    },
+    {
         "name": "Portal",
-        "dates": "2008-present"
+        "dates": "2008-present",
+        "image": "portal-nexus-routes.png"
     },
     {
         "name": "MyCityLink",
-        "dates": "2011-present"
+        "dates": "2011-present",
+        "image": "mcl-export.png"
     }
 ]

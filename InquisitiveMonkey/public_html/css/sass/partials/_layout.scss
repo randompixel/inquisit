@@ -35,6 +35,17 @@ html {
     min-height:     25rem !important;
 }
 
+.mini-card {
+    margin-bottom:  1rem;
+    img {
+            height: auto;
+            width: 100%;
+        }
+    p {
+        margin: 1rem;
+    }
+}
+
 .badges {
     margin-top:     1.6rem;
 }
