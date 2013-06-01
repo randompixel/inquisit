@@ -1,12 +1,23 @@
 <h2>Portfolio</h2>
-<div class='row-fluid'>
-    <div class="span3 mini-card" ng-repeat="project in portfolio">
-        <img ng-src="/img/portfolio/{{project.image}}"/>
-        <p>
-            <b>{{project.name}}</b>
-            <br/>
-            {{project.dates}}
-        </p>
+<div id='portfolio-items' class='row-fluid'>
+    <div class="span3" ng-repeat="project in portfolio">
+        <div class='card-container' ng-click='flipped = !flipped'>
+            <div class="flip-card  ng-class:{'flipped':flipped}">
+                <div class="mini-card card-front">
+                    <img ng-src="/img/portfolio/{{project.image}}"/>
+                    <p>
+                        <b>{{project.name}}</b>
+                        <br/>
+                        {{project.dates}}
+                    </p>
+                </div>
+                <div class='mini-card card-back'>
+                    <p>{{project.detail}}</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class='clearfix'></div>
 </div>
 <a class='btn' href='#/'><i class='icon-home'></i> Home</a>

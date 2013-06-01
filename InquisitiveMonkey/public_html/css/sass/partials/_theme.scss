@@ -39,7 +39,7 @@ h2 {
 
 #header {
     background: #000;
-    
+
 }
 
 #main {
@@ -48,13 +48,13 @@ h2 {
     padding:    1rem;
     @include box-shadow(0px,2px,1px,rgba(0,0,0,.2),inset);
 
+
     .card, .mini-card {
         background: $card-background;
         @include border-radius(3px);
         @include box-shadow(1px,1px,0,rgba(0,0,0,.1),inset);
         @include box-shadow(0px,-1px,0,rgba(0,0,0,.4),inset);
-        color: $dark-text; 
-
+        color: $dark-text;
     }
 
     #about {

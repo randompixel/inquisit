@@ -2,21 +2,25 @@
     {
         "name": "MyCityLink - Redesign",
         "dates": "2013",
-        "image": "mcl-new-radar.png"
+        "image": "mcl-new-radar.png",
+        "detail": "A re-design project initiated based on user feedback, CakePHP 2.3 upgrade, responsive design and workflow optimisations."
     },
     {
         "name": "Portal - Redesign",
         "dates": "2013",
-        "image": "portal-new-wide.png"
+        "image": "portal-new-wide.png",
+        "detail": "After growing organically for many years, this redesign worked on optimising user workflows and simplifying the data presented by peeling away layers of UI."
     },
     {
         "name": "Portal",
         "dates": "2008-present",
-        "image": "portal-nexus-routes.png"
+        "image": "portal-nexus-routes.png",
+        "detail": "Imagined, designed and built core company web app founded around consolidating data and presenting it in useful ways."
     },
     {
         "name": "MyCityLink",
         "dates": "2011-present",
-        "image": "mcl-export.png"
+        "image": "mcl-export.png",
+        "detail": "Industry first Customer Suite of Parcel Tracking apps mashing up driver GPS data with mapping visualisations."
     }
 ]

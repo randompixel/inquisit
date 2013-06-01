@@ -61,3 +61,39 @@
     background: -o-linear-gradient($_angle-with-vendor-prefix, $colour-stops);
     background: linear-gradient($_angle, $colour-stops);
 }
+
+@mixin perspective($perspective) {
+    perspective: $perspective;
+    -webkit-perspective: $perspective;
+    -moz-perspective: $perspective;
+    -o-perspective: $perspective;
+    -ms-perspective: $perspective;
+}
+
+@mixin transform($method, $style:'flat', $backface:'visible') {
+    transform: $method;
+    -webkit-transform: $method;
+    -moz-transform: $method;
+    -o-transform: $method;
+    -ms-transform: $method;
+
+    transform-style: $style;
+    -webkit-transform-style: $style;
+    -moz-transform-style: $style;
+    -o-transform-style: $style;
+    -ms-transform-style: $style;
+
+    backface-visibility: $backface;
+    -webkit-backface-visibility: $backface;
+    -moz-backface-visibility: $backface;
+    -o-backface-visibility: $backface;
+    -ms-backface-visibility: $backface;
+}
+
+@mixin transition($type, $length, $easing:'') {
+    transition: $type $length $easing;
+    -webkit-transition: $type $length $easing;
+    -moz-transition: $type $length $easing;
+    -o-transition: $type $length $easing;
+    -ms-transition: $type $length $easing;
+}

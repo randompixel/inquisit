@@ -14,4 +14,9 @@ function PortfolioCtrl($scope, $http) {
     $http.get('data/portfolio.json').success(function(data) {
        $scope.portfolio = data; 
     });
+    
+    $scope.isFlipped = function() {
+        $scope.flipped = ($scope.flipped) ? false : true;
+        return $scope.flipped;
+    };
 }
