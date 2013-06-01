@@ -70,19 +70,29 @@
     -ms-perspective: $perspective;
 }
 
-@mixin transform($method, $style:'flat', $backface:'visible') {
+@mixin transform($method) {
     transform: $method;
     -webkit-transform: $method;
     -moz-transform: $method;
     -o-transform: $method;
     -ms-transform: $method;
+}
 
+@mixin transform-context($style:'flat', $origin:'center center') {
     transform-style: $style;
     -webkit-transform-style: $style;
     -moz-transform-style: $style;
     -o-transform-style: $style;
     -ms-transform-style: $style;
 
+    transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+}
+
+@mixin backface-visibility($backface:'visible') {
     backface-visibility: $backface;
     -webkit-backface-visibility: $backface;
     -moz-backface-visibility: $backface;
